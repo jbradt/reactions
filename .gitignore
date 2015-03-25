@@ -1,2 +1,6 @@
 */.ipynb_checkpoints/*
 *.pyc
+*.log
+*.synctex.gz
+*latexmk
+*.aux
