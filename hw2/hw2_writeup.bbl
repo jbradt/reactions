@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{1}%
+\begin{thebibliography}{2}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -59,4 +59,22 @@
   {journal} {\bibinfo  {journal} {Nuclear Physics A}\ }\textbf {\bibinfo
   {volume} {713}},\ \bibinfo {pages} {231} (\bibinfo {year}
   {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sakaguchi}\ \emph {et~al.}(1982)\citenamefont
+  {Sakaguchi}, \citenamefont {Nakamura}, \citenamefont {Hatanaka},
+  \citenamefont {Goto}, \citenamefont {Noro}, \citenamefont {Ohtani},
+  \citenamefont {Sakamoto}, \citenamefont {Ogawa},\ and\ \citenamefont
+  {Kobayashi}}]{Sakaguchi1982}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Sakaguchi}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Nakamura}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Hatanaka}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Goto}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Noro}}, \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Ohtani}}, \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {Sakamoto}}, \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {Ogawa}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Kobayashi}},\ }\href {\doibase 10.1103/PhysRevC.26.944}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physical Review C}\ }\textbf
+  {\bibinfo {volume} {26}},\ \bibinfo {pages} {944} (\bibinfo {year}
+  {1982})}\BibitemShut {NoStop}%
 \end{thebibliography}%
