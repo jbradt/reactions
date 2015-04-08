@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[aps, prc, twocolumn, reprint]{revtex4-1}
 
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -47,22 +47,25 @@
 
 % Titles and headers
 
-\title{Phy 982 Homework 2}
-\author{Josh Bradt and Chris Izzo}
-\date{April 9, 2015}
-
-\makeatletter
-\let\thetitle\@title
-\let\theauthor\@author
-\makeatother
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\chead{\footnotesize \MakeUppercase{\thetitle}} \rhead{\footnotesize\thepage}
-\cfoot{}
-\renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
+
+\title{Physics 982 Homework 2}
+\author{Josh Bradt}
+\author{Chris Izzo}
+\date{April 9, 2015}
+
+% \makeatletter
+% \let\thetitle\@title
+% \let\theauthor\@author
+% \makeatother
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \chead{\footnotesize \MakeUppercase{\thetitle}} \rhead{\footnotesize\thepage}
+% \cfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+
 
 \maketitle
 
@@ -76,14 +79,14 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{{images/protons_nonuc.pdf}}
+		\includegraphics[width=\columnwidth]{{images/protons_nonuc.pdf}}
 		\caption{Elastic scattering cross sections for protons on \nuc{100}{Mo} at \SI{5}{MeV} and \SI{50}{MeV} for point-like and finite-radius potentials. This does not include a nuclear potential.}
 		\label{fig:protons_nonuc}
 	\end{figure}
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{{images/neutrons_nonuc.pdf}}
+		\includegraphics[width=\columnwidth]{{images/neutrons_nonuc.pdf}}
 		\caption{Elastic scattering cross sections for neutrons on \nuc{100}{Mo} at \SI{5}{MeV} and \SI{50}{MeV} for point-like and finite-radius potentials. This does not include a nuclear potential.}
 		\label{fig:neutrons_nonuc}
 	\end{figure}
@@ -101,7 +104,7 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{{images/nuc_all.pdf}}
+		\includegraphics[width=\columnwidth]{{images/nuc_all.pdf}}
 		\caption{Elastic scattering cross sections on \nuc{100}{Mo} with a volume nuclear potential for protons (top) and neutrons (bottom) at \SI{5}{MeV} and \SI{50}{MeV}.}
 		\label{fig:nuc_all}
 	\end{figure}
@@ -112,7 +115,7 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{{images/nuc_real.pdf}}
+		\includegraphics[width=\columnwidth]{{images/nuc_real.pdf}}
 		\caption{Elastic scattering cross sections on \nuc{100}{Mo} with only the real component of the volume nuclear potential. This is shown for protons (top) and neutrons (bottom) at \SI{5}{MeV} and \SI{50}{MeV}.}
 		\label{fig:nuc_real}
 	\end{figure}
@@ -142,7 +145,7 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{{images/big_r.pdf}}
+		\includegraphics[width=\columnwidth]{{images/big_r.pdf}}
 		\caption{Elastic scattering with the radius increased to \SI{10}{fm}.}
 		\label{fig:big_r}
 	\end{figure}
