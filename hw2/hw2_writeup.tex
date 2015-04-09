@@ -38,6 +38,7 @@
 \newcommand{\nuc}[2]{${}^{#1}\text{#2}$}
 
 \newcommand{\fresco}[0]{\textsc{Fresco}\xspace}
+\newcommand{\sfresco}[0]{\textsc{Sfresco}\xspace}
 
 
 \begin{document}
@@ -83,7 +84,7 @@
 
 		\item As before, the high-energy protons penetrate the Coulomb barrier. This leads to a more complex angular distribution since the proton sees the internal structure of the nucleus.
 
-		\item For both energies, the neutrons probe the nuclear potential. This is because they are not affected by Coulomb repulsion. We also see that there is less scattering to backwards angles for the higher-energy neutrons.
+		\item For both energies, the neutrons probe the nuclear potential. This is because they are not affected by Coulomb repulsion. We also see that there is less scattering at backwards angles for the higher-energy neutrons.
 	\end{enumerate}
 
 	\begin{figure}[tb]
@@ -182,21 +183,44 @@
 
 \section{Fitting experimental data}
 
-Lorem ipsum \cite{Sakaguchi1982} Eiusmod id minim consequat pariatur cupidatat tempor officia in in labore sed irure quis anim commodo velit enim dolor anim laborum ad consectetur nostrud laboris veniam sed dolor ex commodo dolor cupidatat velit Ut est culpa eu ullamco proident eiusmod ut aliqua do esse ut dolor dolor laboris culpa consectetur enim Duis Excepteur et Duis cupidatat et qui dolore veniam dolore commodo voluptate Ut ad fugiat officia esse in eu commodo nostrud est officia id id ea qui amet sunt irure et consectetur occaecat aliquip ut velit ea labore dolore aliqua in proident do Duis tempor cillum pariatur aliqua aliquip in cupidatat et incididunt elit amet commodo consectetur quis Duis veniam proident exercitation occaecat anim in mollit Ut sunt dolore ut cillum Ut culpa officia consectetur nostrud culpa nisi sed laboris in nisi enim id dolor aliquip cupidatat laborum labore do Ut dolore exercitation occaecat dolore culpa magna culpa mollit in qui Duis laboris veniam Excepteur eiusmod nostrud minim dolor ullamco Ut officia Duis esse non ullamco qui consectetur cupidatat adipisicing nisi incididunt cillum et enim enim ad officia dolor eu laborum laboris mollit ea in Excepteur commodo officia tempor officia magna sint veniam qui proident sed aute Duis ea.
+In this part, we used \sfresco to fit experimental data.  We used data from Sakaguchi et al. \cite{Sakaguchi1982} for elastic scattering of \SI{65}{MeV} protons off of \nuc{100}{Mo}. We performed a variety of fits to this data, and the results from each fit are shown in Table~\ref{tab:params}.
 
-Lorem ipsum Ut in adipisicing deserunt ad laborum est aute esse cillum qui ad velit dolore aliqua irure proident in sint fugiat pariatur ullamco id incididunt non nulla incididunt Duis do ut enim aute aliqua mollit.
+We began by fitting an optical potential with no surface component and no spin-orbit component.  This left six free parameters for the real and imaginary volume potential.  Rather than fitting all six at once, we began by fixing five parameters and only varying the real potential depth. Then we gradually added each remaining parameter one at a time.  Our fit with all six volume potential parameters gave a total $\chi^2/N = 260.324$.  This value, though quite large, is not unexpected because the model does not yet account for a surface imaginary component or a spin-orbit component of the optical potential.  For comparison, we then removed the volume imaginary component and fit the parameters for a surface imaginary component.  This lowered our total $\chi^2/N$ to 149.012.  A comparison of these two fits and the experimental data is shown in Fig.~\ref{fig:fits:a}.
 
-Lorem ipsum Eiusmod id minim consequat pariatur cupidatat tempor officia in in labore sed irure quis anim commodo velit enim dolor anim laborum ad consectetur nostrud laboris veniam sed dolor ex commodo dolor cupidatat velit Ut est culpa eu ullamco proident eiusmod ut aliqua do esse ut dolor dolor laboris culpa consectetur enim Duis Excepteur et Duis cupidatat et qui dolore veniam dolore commodo voluptate Ut ad fugiat officia esse in eu commodo nostrud est officia id id ea qui amet sunt irure et consectetur occaecat aliquip ut velit ea labore dolore aliqua in proident do Duis tempor cillum pariatur aliqua aliquip in cupidatat et incididunt elit amet commodo consectetur quis Duis veniam proident exercitation occaecat anim in mollit Ut sunt.
+Next we attempted to further improve our fit by adding a spin-orbit component to the real volume and surface imaginary components.  Once again we gradually added parameters to our fit until all nine parameters were included.  This reduced our total $\chi^2/N$ to 52.724.  A comparison of this fit to the surface fit without a spin-orbit component can be seen in Fig.~\ref{fig:fits:b}.
+
+To reduce our $\chi^2/N$ even further, we performed another fit including both volume and surface imaginary components as well as a spin-orbit component in the optical potential.  This resulted in a total of 12 parameters and reduced our total $\chi^2/N$ to 18.833.  A comparison of this fit to the fit with no volume imaginary component is shown in Fig.~\ref{fig:fits:c}.
+
+Finally, we found that the optical parameters obtained by fitting with \sfresco were very sensitive to our initial guesses.  Sakaguchi et al. gave a set of good parameters that they used to fit the data. \cite{Sakaguchi1982}  If we use these parameters as initial guesses and perform another 12-parameter fit in \sfresco, we see that the total $\chi^2/N$ falls to 4.806.  A comparison of this fit to our previous 12-parameter fit is shown in Fig.~\ref{fig:fits:d}.
 
 \begin{figure*}
 	\centering
 	\subfloat[Volume vs. Surface Potentials]{\includegraphics[width=\columnwidth]{images/vol_vs_surf.pdf}\label{fig:fits:a}}
 	\subfloat[Surface with and without SO interaction]{\includegraphics[width=\columnwidth]{images/surf_and_spin.pdf}\label{fig:fits:b}} \\
 	\subfloat[Full fit vs. Surface+SO]{\includegraphics[width=\columnwidth]{images/everything_vs_surfso.pdf}\label{fig:fits:c}} 
-	\subfloat[Full fit vs. Published Fit]{\includegraphics[width=\columnwidth]{images/comp_to_paper.pdf}\label{fig:fits:d}}
-	\caption{Lorem ipsum Adipisicing quis pariatur consectetur nostrud reprehenderit dolor proident Duis do proident minim pariatur.}
+	\subfloat[Full fits with different initial conditions]{\includegraphics[width=\columnwidth]{images/comp_to_paper.pdf}\label{fig:fits:d}}
+	\caption{Angular distributions for scattering of \SI{65}{MeV} protons off of \nuc{100}{Mo}. Black points represent experimental data, and solid curves represent different \sfresco fits to the data. The data points include error bars that are too small to see on the logarithmic scale of this graph. In \protect\subref{fig:fits:a}, a fit with the volume imaginary component is compared to a fit with the surface imaginary component. Graph \protect\subref{fig:fits:b} shows the effect of adding a spin-orbit component to our previous fit that included a surface imaginary component. The next plot \protect\subref{fig:fits:c} adds a volume imaginary component to the surface potential with a spin-orbit component to produce a full fit. The final plot \protect\subref{fig:fits:d} compares two full fits with different sets of initial conditions.}
 	\label{fig:fits}
 \end{figure*}
+
+\begin{table*}[h]
+\begin{ruledtabular}
+\begin{tabular}{lllllllllllllr}
+Fit          & $V_R$ & $r_R$ & $a_R$ & $W_V$ & $r_V$ & $a_V$ & $W_S$ & $r_S$ & $a_S$ & $V_{SO}$ & $r_{SO}$ & $a_{SO}$ & $\chi^2/N$ \\
+\colrule
+Volume       & 34.26 & 1.00  & 0.83  & 15.33 & 0.89  & 0.87  &       &       &       &          &          &          & 260.32     \\
+Surface      & 37.39 & 1.00  & 0.71  &       &       &       & 5.09  & 1.01  & 0.99  &          &          &          & 149.01     \\
+Surface + SO & 36.45 & 1.02  & 0.62  &       &       &       & 6.37  & 1.01  & 0.91  & 5.29     & 1.00     & 0.64     & 52.72      \\
+Full         & 38.43 & 0.98  & 0.73  & 6.14  & 0.86  & 0.74  & 5.99  & 1.00  & 0.72  & 6.60     & 0.98     & 0.78     & 18.83      \\
+Full 2       & 35.27 & 1.02  & 0.75  & 6.79  & 0.87  & 0.77  & 5.79  & 1.03  & 0.59  & 5.55     & 0.99     & 0.69     & 4.81      
+\end{tabular}
+\end{ruledtabular}
+
+\caption{Parameters and $\chi^2/N$ values from the various fits. Fits ``Full'' and ``Full 2'' correspond to using all of the parameters, but fit ``Full 2'' uses initial conditions from Sakaguchi et al. \cite{Sakaguchi1982}}
+\label{tab:params}
+
+\end{table*}
+
 
 \bibliography{hw2}
 
